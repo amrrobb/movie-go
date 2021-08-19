@@ -1,0 +1,136 @@
+*{
+  box-sizing: border-box;
+  transition: all .3s ease-in-out;
+}
+
+.mediacard{
+  border-radius: 12px;
+  /* border-style: solid; */
+  /* border-color: rgba(218, 36, 36, 0.3); */
+  width: 18em;
+  height: 25em;
+  color: #ececec;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transform: scale(1);
+  
+}
+.mediacard:hover{
+  box-shadow: 0px 10px 10px rgba(58, 71, 80, .8);
+  transform: scale(1.05);
+}
+.mediacard .product-img{
+  width: 100%;
+  height: 300px;
+  position: relative;
+  background-color: rgb(238,238,238);
+}
+.mediacard .product-img img{
+  position: absolute;
+  width: 18em;
+  height: auto;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  filter: drop-shadow(0px 0px 5px rgba(0,0,0,.8));
+    
+}
+.mediacard:hover .product-img img{
+  transform: translate(-50%, -50%) scale(1.05);
+  filter: drop-shadow(0px 0px 5px rgba(0,0,0,.5));
+  /* color: #ffffff; */
+  transition-delay: .01s;
+  width: 20em;
+  
+}
+.add-to-fav{
+  position: absolute;
+  width: 18em;
+  height: 21em;
+  background-color: rgba(51, 44, 44, 0.7);
+  left: 0px;
+  top: 0px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-21em);
+  transition: all .3s ease-in-out;
+}
+.mediacard:hover .add-to-fav{
+  transform: translateY(0);
+  transition: all .3s ease-in-out;
+}
+.add-to-mediacard-btn{
+  padding: 5% 0; 
+  width: 10%;
+  margin-bottom: 10%;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  border-style: none;
+  /* border:2px solid #ececec; */
+  cursor: pointer;
+  outline: none;
+}
+.mediacard:hover .add-to-mediacard-btn{
+  transform: scale(1.05);
+  transition-delay: .3s;
+}
+.mediacard:hover .add-to-mediacard-btn:hover{
+  transform: scale(1);
+  transition-delay: 0s;
+  cursor: pointer;
+}
+.mediacard-footer{
+  padding: 1.2em;
+  display: flex;
+  height: 6.5em;
+  width: 100%;
+  position: absolute;
+  bottom: -1em;
+  z-index: 9;
+  background-image: linear-gradient(0deg, #414141 10%, #313131 60%);
+  flex-wrap: wrap;
+  transition: all .3s;
+  
+}
+.mediacard:hover .mediacard-footer{
+  bottom: 0px;
+  transition: all .3s;
+}
+.title{
+  flex-basis: 80%;
+  text-align: start;
+  height: 60px;
+}
+.title h5{
+  padding: 5px 0px;
+  margin: 0px;
+}
+.title span{
+  color: #ececec;
+}
+.identifier{
+  flex-basis: 20%;
+  text-align: end;
+  color: #ebebeb;
+  font-size: 1.4em;
+  height: 1em;
+}
+.product-options{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  align-self: baseline;
+  margin-top: 20px;
+}
+.sizes{
+  width: 100%;
+}
+.sizes strong{
+  width: 100%;
+  display: block;
+}
